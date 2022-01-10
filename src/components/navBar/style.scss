@@ -1,0 +1,276 @@
+.mainContainer{
+    background: transparent;
+
+    .outletContainer{
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+.navContainer{
+    width: 100%;
+    height: 7rem;
+    padding: 0.5rem 1rem 0rem 1rem;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+
+    margin: 0;
+
+    .navBar{
+        width: 90%;
+        max-width: 1200px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 15% 55% 30%;
+        color: white;
+
+        .navSection{
+            height: 6rem;
+            display: grid;
+            align-items: center;
+            grid-template: 50% 50% / 100%;
+            position: relative;
+            
+            .Count{
+                font-size: 12px; 
+                justify-content: center;
+                align-items: center;
+                padding: 2px 3px;
+                border-radius: 100px;
+                background-color: red;
+                position: absolute;
+                top:0;
+                right: 0;
+            }
+
+            .addSection{
+                display: flex;
+
+                justify-content: center;
+                
+            }
+
+            .userSection{
+         
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+                a{
+                    text-decoration: none;
+                    color:#fff
+                }
+
+                .notificationIcon{
+                    @extend .Icon;
+                    position: relative;
+                    
+                    
+                    .show{
+                        display: flex;
+                    }
+                    .hidden{
+                        display: none;
+                    }
+
+                    .notificationCount {
+                        @extend .Count
+                    }
+
+                }
+
+                .cartIcon{
+                    @extend .Icon;
+                    position: relative
+                }
+
+                .itemsCartCount{
+                    @extend .Count;
+                    background-color: #0075A2;
+                }
+
+                .userIcon{
+                    @extend .Icon;
+                    position: relative;
+
+                    .collapseUserMenu{
+                        
+                        height: 0;
+                        transition: 200ms all;
+                        position: absolute;
+                        bottom: 0;
+                    }
+                }
+
+                .collapseActive{
+                    background-color: #f19143;
+                }
+                
+                .Icon{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 0.5rem;
+                    border-radius: 100px;
+                    transition: 200ms;
+                }
+
+                .Icon:hover{
+                    
+                    background-color: #f19143;
+                }
+
+                img{
+                    width: 1.5rem;
+                }
+
+               
+
+            }
+
+            .userAddress{
+                margin-right: 0.5rem;
+
+                width: 100%;
+
+                p{
+                    margin: 0;
+                }
+            }
+
+            .collapse{
+                display: block;
+                background-color: black;
+                padding: 0.5rem;
+                position: absolute;
+                top: 6rem;
+                z-index: 100;
+            }
+
+            .hide{
+                display: none;
+            }
+
+            .collapseUserMenu{
+                @extend .collapse;
+                width: 8rem; 
+                height: auto;
+                right: -1.6rem;
+                //transition: 200ms;
+
+                    ul{
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                    }
+            
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        font-size: large;
+                    }
+
+                    div{
+                        font-size: large;
+                        cursor: pointer;
+                    }
+
+                    li:hover{
+                        
+                        border-bottom: 1px solid #f19143;
+                    }
+            }
+
+            .collapseNotifications{
+                @extend .collapse;
+                //background-color: white;
+                right: 3.5rem;
+
+                .notificationItem{
+                    position: relative;
+                    display: flex;
+                    border-top: 1px solid #f19143;
+                    padding: 0.2rem 0.3rem;
+                    margin: 0.2rem 0;
+                    transition: 200ms;
+
+                    p{
+                        margin: 0;
+                    }
+
+                    img{
+                        width: 3rem;
+                        height: 3rem;
+                    }
+
+                    .deleteBtn{
+                        position: absolute;
+                        right: 0.1rem;
+                        top: 0.1rem;
+                        cursor: pointer;
+                    }
+
+                }
+
+                .notificationItem:hover{
+                    background-color: rgb(39, 39, 39);
+                }
+
+            }
+
+        }
+
+        .searchForm{
+            width: 90%;
+            background-color: white;
+            padding: 0 0.2rem 0.1rem 0.2rem;
+            display: flex;
+            align-items: center;
+
+            img{
+                max-width:1.5rem;
+            }
+
+            input{
+                outline-width: 0;
+                border-top-width: 0;
+                border-right-width: 0;
+                border-left-width: 0;
+                border-bottom: 1px solid #fff;
+                z-index: 0;
+                transition: 300ms;
+                width: 100%;
+                height: 2rem;
+                padding: 0 0 0 0.5rem;
+            }
+
+            input:focus{
+                border-bottom: 1px solid #f19143;
+            }
+        }
+
+        .linksContainer{
+            display: grid;
+            grid-template: auto / repeat(6,16%);
+
+            .Link{
+                padding: 0.5rem 1rem 0.5rem 1rem;
+                color: white;
+                text-decoration: none;
+                transition: 500ms;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .Link:hover{
+                color:black;
+                background-color: white;
+            }
+        
+        }
+    }
+}

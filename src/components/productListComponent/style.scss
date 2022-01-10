@@ -1,0 +1,14 @@
+.productListContainer{
+    width: 100%;
+}
+
+.productList{
+    display: grid;
+    min-width: 100%;
+    grid-template: repeat(auto-fill, 18rem) / repeat(4, 13rem) ;
+    grid-gap: 1rem 0rem
+}
+
+.loadSpinner{
+    margin-top: 10rem;
+}

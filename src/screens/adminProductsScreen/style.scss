@@ -1,0 +1,22 @@
+.ProductFormContainer{
+    display: block;
+    background-color: white;
+    position: absolute;
+    width: 0px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: 500ms;
+    transition-property: all;
+    padding: 0rem 1rem;
+    z-index: 200;
+}
+
+.closed{
+    width: 0px;
+}
+
+.open{
+    width: 30%;
+    
+}

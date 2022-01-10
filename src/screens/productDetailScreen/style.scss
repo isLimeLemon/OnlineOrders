@@ -1,0 +1,24 @@
+.detailMainContainer{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.detailContainer{
+    max-width: 1200px;
+    background-color: white;
+    padding: 5rem 1rem;
+    display: grid;
+    grid-template: auto / 24% 69%;
+    grid-gap: 0 1rem;
+
+    .imageContainer{
+
+        img{
+            width: 100%;
+        }
+
+    } 
+
+}

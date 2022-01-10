@@ -1,0 +1,32 @@
+.paginationContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .pageLink{
+        cursor: pointer;
+        border-bottom: 1px solid white;
+        transition: 200ms;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        background-color: white;
+        padding: 0.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-top: 0.5rem;
+        margin-left: 0.2rem;
+        color: black;
+    }
+
+    .pageActive{
+        border-bottom: 1px solid #F19143;
+    }
+
+    .pageLink:hover{
+        box-shadow: 0 0 5px 1px #ccc;
+    }
+
+}

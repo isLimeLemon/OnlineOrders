@@ -1,0 +1,109 @@
+.productContainer{
+    margin: 0.5rem;
+    width: 12rem;
+    height: 18rem;
+    transition: 500ms;
+    background-color: white;
+    position: relative;
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .productImage{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        img{
+            max-width: 100%;
+            max-height: 18rem;
+        }
+    }
+
+    .productData{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        background-color: white;
+        transition: 500ms;
+        height: 9rem;
+        bottom: 0rem;
+
+        .productDescription{
+            position: absolute;
+            padding: 1rem;
+            color: #888;
+            font-weight: 500;
+        }
+
+        .productPrice{
+            position: absolute;
+            bottom: 10%;
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+        
+    }
+
+    .editBtn{
+        background-color: white;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        padding: 0.2rem;
+        top: 0.1rem;
+        left: 0.1rem;
+        transition: 200ms;
+        box-shadow: none;
+
+        img{
+            width: 1.5rem;
+        }
+    }
+
+    .editBtn:hover{
+        box-shadow: 0px 0px 10px #333;
+    }
+
+    .favBtn{
+        background-color: white;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        padding: 0.2rem;
+        top: 0.1rem;
+        right: 0.1rem;
+
+        img{
+            width: 1.5rem;
+        }
+    }
+    .favBtn:hover{
+        transition: 200ms;
+        box-shadow: none;
+        box-shadow: 0px 0px 10px #333;
+    }
+    
+}
+
+//0075A2
+//F19143
+.productContainer:hover{
+    box-shadow: 0px 0px 15px 2px #777;
+
+    .productData{
+        background-color: rgba(255, 255, 255, 0);
+        background-image: linear-gradient(rgba(255, 255, 255, 0), #fff);
+    }
+
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="720px" height="720px" viewBox="0 0 720 720" enable-background="new 0 0 720 720" xml:space="preserve">
+<symbol  id="lupa" viewBox="-240.838 -239.722 479.479 481.64">
+	<path fill="none" stroke="#000000" stroke-width="25" stroke-miterlimit="10" d="M71.662,79.418c0-82.842-67.157-150-150-150
+		s-150,67.158-150,150c0,82.843,67.157,150,150,150S71.662,162.261,71.662,79.418z"/>
+	
+		<line fill="none" stroke="#000000" stroke-width="25" stroke-miterlimit="10" x1="229.803" y1="-230.883" x2="29.502" y2="-30.582"/>
+</symbol>
+<use xlink:href="#lupa"  width="479.479" height="481.64" id="XMLID_1_" x="-240.838" y="-239.722" transform="matrix(1.4849 0 0 -1.4783 360 360)" overflow="visible"/>
+</svg>
