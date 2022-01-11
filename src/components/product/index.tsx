@@ -12,10 +12,12 @@ export interface productData{
     image:string,
     description:string,
     price:number,
-    id:number
+    id:number,
+    editable?:boolean,
+    editAction?:Function
 }
 
-const Product = ({image,description,price,title, id}:productData) => {
+const Product = ({image,description,price,title, id, editable = false, editAction = ()=>{}}:productData) => {
 
     const pathname = "/detail?id="+id
     const User = useSelector((state:rootState) => state.User.value)
@@ -30,7 +32,24 @@ const Product = ({image,description,price,title, id}:productData) => {
             <div className="favBtn">
                 <img src={heart}/>
             </div>
-            <Link className="toDetails" to={pathname}>
+            {
+                editable ? 
+                
+                <div className="toDetails" onClick={()=>{
+                    editAction(id)
+                }}>
+                    <div className="productImage">
+                        <img src={image} alt={description}/>
+                    </div>
+                    <div className="productData">
+                        <div className="productDescription">{title}</div>
+                        <div className="productPrice">$ {price}</div>
+                    </div>
+                </div>     
+                
+                :
+
+                <Link className="toDetails" to={pathname}>
                 <div className="productImage">
                     <img src={image} alt={description}/>
                 </div>
@@ -38,7 +57,9 @@ const Product = ({image,description,price,title, id}:productData) => {
                     <div className="productDescription">{title}</div>
                     <div className="productPrice">$ {price}</div>
                 </div>
-            </Link>
+                </Link>
+
+            }
         </div>
     )
     

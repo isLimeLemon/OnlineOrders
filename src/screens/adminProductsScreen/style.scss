@@ -1,5 +1,18 @@
+.adminProducstMainContainer{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: hidden;
+}
+
+.ProductsListContainer{
+    overflow-y: scroll;
+}
+
 .ProductFormContainer{
-    display: block;
+    display: none;
     background-color: white;
     position: absolute;
     width: 0px;
@@ -10,13 +23,21 @@
     transition-property: all;
     padding: 0rem 1rem;
     z-index: 200;
-}
+} 
 
 .closed{
+    
     width: 0px;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
 }
 
 .open{
     width: 30%;
-    
 }

@@ -10,10 +10,12 @@ interface productListProps{
     page:number,
     pages:number,
     loading:boolean,
-    Products:Array<queryProductData>
+    Products:Array<queryProductData>,
+    editProducts?:boolean,
+    editAction?:Function
 }
 
-const ProductList = ({Products,loading,page,pages,setPage}:productListProps) => {
+const ProductList = ({Products,loading,page,pages,setPage, editProducts=false, editAction=()=>{}}:productListProps) => {
  
     return(
         <div className="productListContainer">
@@ -23,7 +25,16 @@ const ProductList = ({Products,loading,page,pages,setPage}:productListProps) => 
                     loading === false ? 
                         Products.length > 0 ? 
                             Products.map((product:queryProductData) => (
-                                <Product key={product.title} id={product.id} title={product.title} image={product.image_Medium} description={product.description} price={product.price} />
+                                <Product    
+                                    editAction={editAction}
+                                    editable={editProducts} 
+                                    key={product.id} 
+                                    id={product.id} 
+                                    title={product.title} 
+                                    image={product.image_Medium} 
+                                    description={product.description} 
+                                    price={product.price} 
+                                />
                             ))
                         : <div><h3>Sin resultados</h3></div>
                     : <div className="loadSpinner"><ClipLoader size={100} color="#F19143"/></div>

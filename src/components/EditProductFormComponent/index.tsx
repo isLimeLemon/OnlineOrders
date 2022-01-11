@@ -18,11 +18,10 @@ const productForm:productData = {
 
 interface productFormProps {
     edit:boolean,
-    open:boolean,
     idProd:string | false
 }
 
-export const ProductForm = ({edit = false, open = false, idProd = false}:productFormProps) => {
+export const ProductForm = ({edit = false, idProd = false}:productFormProps) => {
 
     const [Product, setProduct] = useState<ProductDetail>({
         categoryId:0,
@@ -33,8 +32,6 @@ export const ProductForm = ({edit = false, open = false, idProd = false}:product
         price:0,
         title:"",
     })
-
-
 
     useEffect(() => {
         if(edit && idProd){
@@ -47,18 +44,19 @@ export const ProductForm = ({edit = false, open = false, idProd = false}:product
             })
         }
 
-
     }, [edit, idProd])
 
-    console.log(Product)
-
+    //console.log(Product)
+ 
     return (
-        <form className='FormContainer'>
+        <form className='FormContainer' method='post' action='#' onSubmit={(e)=>{
+            
+        }}> 
             <div className='formContent'>
                 <div className='inputContainer'>
                     <label>Imagen</label>
                     <img src={edit ? Product.image_Medium : productForm.image}/>
-                    <button className='LoadImageBtn' onClick={()=>{window.document.getElementById('getFile')?.click()}}>Cargar imagen</button>
+                    <button className='LoadImageBtn' onClick={(e)=>{ e.preventDefault();window.document.getElementById('getFile')?.click()}}>Cargar imagen</button>
                     <input type='file' id="getFile" style={{display:"none"}}/>
                 </div>
                 <div className='inputContainer'>
